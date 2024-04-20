@@ -1,0 +1,287 @@
+<html>
+<head>
+<title></title>
+<link rel="stylesheet" type="text/css" href="format.css">
+<style type="text/css">
+        <!--
+                 a:link {font-family:Arial;        font-size:10pt;        text-decoration:none;}
+                a:visited {font-family:Arial; font-size:10pt; text-decoration:none;}
+                a:hover {color:#FF3333; text-decoration:none; font-weight:normal; font-size:10pt;}
+        //-->
+</style>
+</head>
+
+<body>
+
+    <iframe src="oben.html" width="800" height="120" name="IFrame3" id="IFrame3" scrolling="no" frameborder="0">
+        <p>Ihr Browser kann leider keine eingebetteten Frames anzeigen: Sie können die eingebettete Seite aber
+            den
+            folgenden.</p>
+    </iframe>
+
+    <h2>Übung 3</h2>
+    <br>
+    <h3>Aufgabe 1.1</h3>
+    <p>Einfache Schwingungsformen: Zunächst brauchen wir nur die oben beschriebenen
+		Module. Wir schauen uns die Wellenformen der Grundklänge des Oszillators an
+		(Sägezahn, Rechteck, etc.). Wir können nun Beispiele der einzelnen Klänge durch
+		Drücken einer Taste spielen und mit dem Recorder aufzeichnen. Wie man das RecorderPlugin aktiviert, zeige ich im Übungstermin! Man benötigt dafür einen (kostenfreien)
+		VCVRack-Account.</p>
+    <h6>Lösung</h6>
+    <img width="800" src="pics/Ubung 3/a01.png" alt="Bild konnte nicht geladen werden">
+	
+	  <p>sin wave</p>
+    <audio controls>
+        <source src="audio/Ubung 3/Sin.wav">
+    </audio>
+	
+	    <p>saw wave</p>
+    <audio controls>
+        <source src="audio/Ubung 3/Saw.wav">
+    </audio>
+	
+	<p>tri wave</p>
+    <audio controls>
+        <source src="audio/Ubung 3/Tri.wav">
+    </audio>
+	
+	 <p>sqr 10 wave</p>
+    <audio controls>
+        <source src="audio/Ubung 3/Sqr10.wav">
+    </audio>
+	
+	<p>sqr 30 wave</p>
+    <audio controls>
+        <source src="audio/Ubung 3/Sqr30.wav">
+    </audio>
+	
+	<p>sqr 50 wave</p>
+    <audio controls>
+        <source src="audio/Ubung 3/Sqr50.wav">
+    </audio>
+
+    <br>
+    <h3>Aufgabe 1.2</h3>
+    <p>Außerdem lässt sich in GRAM oder Praat das Spektrum anzeigen.
+		(Ins Ergebnisprotokoll: Bilder der Spektren für drei markante P-Width-Einstellungen beim 
+		Rechteck, ein Sägezahn, ein Dreieck, Ausschnitte aus den wavs, Angaben der Frequenzen und 
+		Amplituden in dB und Prozentwerten für die Grundschwingung und die ersten drei Obertöne, 
+		bei denen die Amplitude größer 0 ist).</p>
+    <h6>Lösung</h6>
+	<p>Formel zur berechnung der %te:</p><br>
+	<p>10^(db/20) = %</p>
+    <p>sin wave</p>
+    <img width="800" src="pics/Ubung 3/sin.png" alt="Bild konnte nicht geladen werden">
+	<table>
+	<tbody>
+	<tr>
+		<th>Frequenz</th>     
+		<th>dB</th>
+		<th>Prozentwerte</th>           
+    </tr>
+    <tr>
+		<td>140</td>
+        <td>-2</td>
+		<td>79,4%</td>
+    </tr>
+    <tr>
+		<td>416</td>
+        <td>-30</td>
+        <td>3,2%</td>
+    </tr>
+    <tr>
+		<td>693</td>
+        <td>-44</td>
+        <td>0,63%</td>
+    </tr>
+	</tbody>
+	</table>
+    <p>saw wave</p>
+    <img width="800" src="pics/Ubung 3/saw.png" alt="Bild konnte nicht geladen werden">
+	<table>
+	<tbody>
+	<tr>
+		<th>Frequenz</th>     
+		<th>dB</th>
+		<th>Prozentwerte</th>           
+    </tr>
+    <tr>
+		<td>143</td>
+        <td>-6</td>
+        <td>50,1%</td>
+    </tr>
+    <tr>
+		<td>277</td>
+        <td>-13</td>
+        <td>22,4%</td>
+    </tr>
+	    <tr>
+		<td>420</td>
+        <td>-15</td>
+		<td>17,7%</td>
+    </tr>
+	</tbody>
+	</table>
+    <p>tri wave</p>
+    <img width="800" src="pics/Ubung 3/tri.png" alt="Bild konnte nicht geladen werden">
+	<table>
+	<tbody>
+	<tr>
+		<th>Frequenz</th>     
+		<th>dB</th>
+		<th>Prozentwerte</th>           
+    </tr>
+    <tr>
+		<td>14</td>
+        <td>-3</td>
+		<td>70,8%</td>
+    </tr>
+    <tr>
+		<td>420</td>
+        <td>-19</td>
+        <td>11,2%</td>
+    </tr>
+    <tr>
+		<td>694</td>
+        <td>-29</td>
+        <td>3,5%</td>
+    </tr>
+	</tbody>
+	</table>
+    <p>sqr 10 wave</p>
+    <img width="800" src="pics/Ubung 3/sqr10.png" alt="Bild konnte nicht geladen werden">
+	<table>
+	<tbody>
+	<tr>
+		<th>Frequenz</th>     
+		<th>dB</th>
+		<th>Prozentwerte</th>           
+    </tr>
+    <tr>
+		<td>149</td>
+        <td>-10</td>
+		<td>31,6%</td>
+    </tr>
+    <tr>
+		<td>275</td>
+        <td>-11</td>
+        <td>28,2%</td>
+    </tr>
+    <tr>
+		<td>415</td>
+        <td>-11</td>
+        <td>28,2%</td>
+    </tr>
+	</tbody>
+	</table>
+    <p>sqr 30 wave</p>
+    <img width="800" src="pics/Ubung 3/sqr30.png" alt="Bild konnte nicht geladen werden">
+	<table>
+	<tbody>
+	<tr>
+		<th>Frequenz</th>     
+		<th>dB</th>
+		<th>Prozentwerte</th>           
+    </tr>
+    <tr>
+		<td>140</td>
+        <td>-2</td>
+		<td>79,4%</td>
+    </tr>
+    <tr>
+		<td>277</td>
+        <td>-7</td>
+        <td>44,6%</td>
+    </tr>
+    <tr>
+		<td>417</td>
+        <td>-21</td>
+        <td>8,9%</td>
+    </tr>
+	</tbody>
+	</table>
+    <p>sqr 50 wave</p>
+    <br>
+    <img width="800" src="pics/Ubung 3/sqr50.png" alt="Bild konnte nicht geladen werden">
+	<table>
+	<tbody>
+	<tr>
+		<th>Frequenz</th>     
+		<th>dB</th>
+		<th>Prozentwerte</th>           
+    </tr>
+    <tr>
+		<td>140</td>
+        <td>-1</td>
+		<td>89,1%</td>
+    </tr>
+    <tr>
+		<td>412</td>
+        <td>-10</td>
+        <td>31,6%</td>
+    </tr>
+    <tr>
+		<td>700</td>
+        <td>-15</td>
+        <td>17,7%</td>
+    </tr>
+	</tbody>
+	</table>
+
+    <br>
+    <h3>Aufgabe 2</h3>
+    <p>Schwebung: Nun bringen wir einen zweiten Oszillator zum Einsatz. Um die Ausgänge der beiden Oszillatoren anschließen und in der Lautstärke regeln zu können,
+	benötigen wir ein MIXER-Modul, das wir zwischen die beiden VCAs und AUDIO schalten.
+	Zunächst stellen wir beide Oszillatoren auf exakt dieselbe Frequenz und Dreiecksschwingung.
+	Dann verstimmen wir den zweiten gegen den ersten und zeichnen den Klang auf, wenn wir gerade eine Amplitudenmodulation feststellen (Fall A),
+	d.h. einen in der Lautstärke schwankenden Ton. Wir verstimmen die Oszillatoren weiter gegeneinander, bis wir den Eindruck einer Dissonanz haben (Fall B),
+	d.h. es entsteht ein rauer, unangenehmer Klang.</p>
+    <h6>Lösung</h6>
+    <p>Originaler Ton</p>
+    <audio controls>
+        <source src="audio/Ubung 3/sound.wav">
+    </audio> <br>
+    <img width="800" src="pics/Ubung 3/a03.png" alt="Bild konnte nicht geladen werden">
+
+    <p>Nun stellen wir mit GRAM für die beiden Fälle die Mittel- und Differenzfrequenzen der Schwingungen fest. Es kann sein, dass die Genauigkeit von GRAM
+	beim Fall A zur Bestimmung der Differenzfrequenz nicht ausreicht. Man kann die Differenzfrequenz aber auch aus dem Oszillogramm der amplitudenmodulierten Schwingung berechnen
+	(z.B. in Samplitude anschauen). Die Periodendauer der Differenzfrequenz entspricht nämlich exakt dem Abstand zwischen zwei Punkten maximaler (oder minimaler) Amplitude.
+	Ins Ergebnisprotokoll für beide Fälle: Mittenfrequenz und Differenzfrequenz, Spektrogramm und wav.</p>
+    <p></p>
+    <h6>Lösung</h6>
+    <p>Ton Fall A</p>
+    <audio controls>
+        <source src="audio/Ubung 3/TonFallA.wav">
+    </audio>
+	<img width="800" src="pics/Ubung 3/SpectogramFallA.png" alt="Bild konnte nicht geladen werden">
+	<p>Differenzfrequenz</p>
+	<img width="800" src="pics/Ubung 3/DiffFreqA.png" alt="Bild konnte nicht geladen werden">
+	<p>Mittenfrequenz</p>
+	<img width="800" src="pics/Ubung 3/MittenFreqA.png" alt="Bild konnte nicht geladen werden">
+    <p>Ton Fall B</p>
+    <audio controls>
+        <source src="audio/Ubung 3/TonFallB.wav">
+    </audio>	
+
+	<img width="800" src="pics/Ubung 3/SpectogramFallB.png" alt="Bild konnte nicht geladen werden">
+	<p>Differenzfrequenz</p>
+	<img width="800" src="pics/Ubung 3/DiffFreqB.png" alt="Bild konnte nicht geladen werden">
+	<p>Mittenfrequenz</p>
+	<img width="800" src="pics/Ubung 3/MittenFreqB.png" alt="Bild konnte nicht geladen werden">
+
+    <br>
+    <h3>Aufgabe3</h3>
+    <p>Klangnachbildung:<p>
+    <h6>Lösung</h6>
+    <audio controls>
+        <source src="audio/Ubung 3/xylophone.wav">
+    </audio><br>
+    <p>
+	Wir haben einen Xylophon-Klang erschaffen, indem wir die VCOs jeweils auf 400 Hz gestellt und eine Sinuskurve verwendet haben, 
+	um einen hohen harmonischen Ton zu erzeugen. Des Weiteren haben wir im ADSR den Attack auf 1 ms gesetzt, den Decay und Release 
+	etwas erhöht und den Sustain auf 0% gesetzt. Dadurch entsteht ein kurzer, impulsartiger Klang. Auch im VCF haben wir die Frequenz 
+	auf das Minimum gesetzt, die Resonanz reduziert und die Frequency Modulation voll aufgedreht.</p>
+    <img width="800" src="pics/Ubung 3/a04.png" alt="Bild konnte nicht geladen werden">
+	<p>Hüllkurve</p>
+	<img width="800" src="pics/Ubung 3/Huellkurve.png" alt="Bild konnte nicht geladen werden">
+</html>

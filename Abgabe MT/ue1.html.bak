@@ -1,0 +1,353 @@
+<html>
+<head>
+<title></title>
+<link rel="stylesheet" type="text/css" href="format.css">
+<style type="text/css">
+        <!--
+                 a:link {font-family:Arial;        font-size:10pt;        text-decoration:none;}
+                a:visited {font-family:Arial; font-size:10pt; text-decoration:none;}
+                a:hover {color:#FF3333; text-decoration:none; font-weight:normal; font-size:10pt;}
+        //-->
+</style>
+</head>
+
+<body>
+
+<iframe src="oben.html" width="800" height="120" name="IFrame3" id="IFrame3" scrolling="no" frameborder="0">
+         <p>Ihr Browser kann leider keine eingebe5tteten Frames anzeigen:Sie k&ouml;nnen die eingebettete Seite &uuml;ber den
+         folgenden.</p>
+</iframe>
+
+<h2>Uebung 1</h2>
+    <br>
+    <h1><a id="1">Aufgabe 1</a></h1>
+    <h4><a id="1a">Aufgabe 1a</a></h4>
+    <p><b>Schneide aus den dir zugeschickten Audio-Files ab dem Zeitpunkt jeweils ein Stück mit der Länge 5 
+        Sekunden und speichere dieses als WAV-Datei ab. Parameter für Musik: fa=44,1 kHz, stereo, für
+        Sprache: fa=8 kHz mono, beide 16 Bit Auflösung. Beim Schneiden achtest du darauf, dass der
+        Schnitt am Beginn einer musikalischen Figur bzw. eines Satzes liegt. 
+    </b></p>
+
+<br><p>Musikaufnahme</p>
+<audio controls><source src="./audio/Musik_03.wav" type="audio/wav"></audio>
+<br><p>Sprache</p>
+<audio controls><source src="./audio/Sprache_03.wav" type="audio/wav"></audio>
+
+<p>Bescheibung</p>
+<p>Loesung</p>
+
+<h1><a id="1">Aufgabe 1</a></h1>
+<h4><a id="1b">Aufgabe 1b</a></h4>
+<p>Erkläre, warum die Audio-Files unterschiedliche Abtastfrequenzen haben.</p>
+<p>Bei Musik überlagern sich viele Frequenzen und die Amplitude ist nicht gleichmäßig verteilt,
+deshalb muss bei Musik die Abtastrate sehr viel höher sein als bei Sprache.</P>
+
+<h4><a id="1c">Aufgabe 1c</a></h4>
+<p><b>Lies die Musik- und die Sprachdatei mit wave_io ein und erkläre die Angaben im Header!</b></p>
+<p>
+    Channel: Ob Mono oder Stereo <br>
+    Frames: Gesamtabtastungen <br>
+    Abtastrate: Wie oft wird pro Sekunde Abgetastet <br>
+    Valid Bits: Wie viele Bit werden pro sekunde Abgetastet <br>
+    Bytes per sample: 2
+</p>
+
+<h4><a id="1d">Aufgabe 1d</a></h4>
+    <p><b>Berechne die Bitrate für die beiden Dateien</b></p>
+    <p>
+        Bits * Kanäle * Abtastrate
+        <br>
+        Für Sprache: 16Bit * 1 * 8000Hz = 128 000 b/s = 128Kbit/s
+        <br>
+        Für Musik: 16Bit * 2 * 44100Hz = 1 441 200 b/s = 1,441Mbit/s
+	</p>
+
+<br>
+    <h1><a id="2">Aufgabe 2</a></h1>
+    <br>
+    <h4><a id="2a">Aufgabe 2a</a></h4>
+    <p><b>Modifiziere wave_io dahingehend, dass die Samples in der WAV-Datei in eine (lesbare) ASCII-Datei geschrieben
+        werden. Lies die von mir geschickten Sinusdateien (Sampling-Frequenz: 16 kHz) ein und bestimme aus den
+        resultierenden Zahlenfolgen in der ASCII-Datei die Frequenz der Sinus-Schwingungen. Begründe!
+    </b></p>
+    <img src="./pics/Ubung 1/2a.png" alt="Bild konnte nicht geladen werden" >
+    <br>
+    <h5>Für sine_hi02.wav</h5>
+    <audio controls>
+    <source src="./audio/sine_hi00.wav" type="audio/wav"></audio>
+        <pre>
+		13623
+		3196
+		-16069
+		9102
+		9102
+		-16069
+		3196
+		13623
+		-13623
+		-3196
+		16069
+		-9102
+		-9102
+		16069
+		-3196
+		-13623
+
+        Sinus-Kurve wechselt in den unteren Bereich
+
+        -14449
+        1606
+        12665
+        -15679
+        4756
+        10394
+        -16305
+        7723
+        7723
+        -16305
+        10394
+        4756
+        -15679
+        12665
+        1606
+        -14449
+    <!--    16kHz Abtastfrequenz / 2 Abtastperioden = 8kHz -->
+
+        Es finden 11 Nulldurchgänge statt. Demzufolge finden 5,5 Schwingungen in 16 Samplewerten statt. 16KHz(16000Hz) / 16 Samplewerte = 16000Hz/16 = 1/1000s.
+        In 1/1000 Sekunde finden 5,5 Schwingungen statt, das bedeutet eine Schwingung dauert 1/1000 * 5,5 = 1/5500 Sekunde. Das entspricht 5500Hz oder aber 5,5 kHz.
+    </pre>
+    <h5>Für sine_lo02.wav</h5>
+    <audio controls>
+    <source src="./audio/sine_lo06.wav" type="audio/wav"></audio>
+    <pre>
+        7723
+        16305
+        10394
+        -4756
+        -15679
+        -12665
+        1606
+        14449
+        14449
+        1606
+        -12665
+        -15679
+        -4756
+        10394
+        16305
+        7723
+
+        Sinus-Kurve wechselt in den unteren Bereich
+
+        -7723
+        -16305
+        -10394
+        4756
+        15679
+        12665
+        -1606
+        -14449
+        -14449
+        -1606
+        12665
+        15679
+        4756
+        -10394
+        -16305
+        -7723
+
+        Es finden 5 Nulldurchgänge statt. Demzufolge finden 2,5 Schwingungen in 16 Samplewerten statt. 16KHz(16000Hz) / 16 Samplewerte = 16000Hz/16 = 1/1000s.
+        In 1/1000 Sekunde finden 2,5 Schwingungen statt, das bedeutet eine Schwingung dauert 1/1000 * 2,5 = 1/2500 Sekunde. Das entspricht 2500Hz oder aber 2,5 kHz.
+
+    </pre>
+    <br>
+	<h4><a id="2b">Aufgabe 2b</a></h4>
+    <p><b>Überprüfe deine Schätzung mit dem Spektralanalyse-Tool GRAM. (Vorgehensweise: Menüpunkt Analyze File,
+        Einstellungen: Freq Scale: Linear, FFT Size: 512, Time scale: 1 msec)</b></p>
+    <img src="./pics/Ubung 1/sinehipng.png" alt="Bild konnte nicht geladen werden">
+    <p>Messungen bei hi ergaben 5 kHz</p>
+    <img src="./pics/Ubung 1/sinelopng.png" alt="Bild konnte nicht geladen werden">
+    <p>Messungen bei lo ergaben  0.5 kHz</p>
+    <br>
+	<h4><a id="2c">Aufgabe 2 c.</a></h4>
+    <p><b>Bei der zeitlichen Diskretisierung eines Analogsignals muss das sogenannte Abtasttheorem
+        eingehalten werden. Wie lautet es und wie lässt sich der Grenzfall, für den es gerade noch gilt,
+        illustrieren? Erstelle hierzu eine Zeichnung und erläutere.</b></p>
+    <img src="./pics/Ubung 1/wunderschoneZeichnung.png" alt="Graph konnte nicht geladen werden">
+    <p>
+        Das Abtasttheorem besagt, dass die Abtastfrequenz doppelt so hoch wie die Tonfrequenz sein muss.
+		In dem illustrierten Grenzfall wird das Verhältnis von 2:1 beschrieben. Das heißt wenn zwei
+		spitzen Amplituden (positiv/negativ) in einer Periode sind, muss es mindestens auch zwei Abtastpunkte
+		in einer Periode geben.
+    </p>
+    <br>
+	<h4><a id="2d">Aufgabe 2d</a></h4>
+    <p><b>Bei herkömmlichen Soundkarten tritt systembedingt kein Aliasing auf, weil das Audiosignal stets
+		  geeignet vorbehandelt wird. Wie sieht die Vorbehandlung aus?
+
+
+    </b></p>
+    <p>Soundkarten besitzen Anti-Aliasing Filter (Tiefpass Filter). Zu hohe Frequenzen werden auch rausgefiltert.</p>
+    <br>
+	<h4><a id="2e">Aufgabe 2e</a></h4>
+    <p><b>Mit einem kleinen Trick lässt sich Aliasing jedoch nachweisen. Diese auch als Down-Sampling bekannte Methode
+        besteht darin, dass man bei einer WAV-Datei z.B. jeden zweiten Abtastwert wegwirft. Man erhält so eine
+        Wellenform, die genau die Hälfte der ursprünglichen Abtastfrequenz aufweist. Wenn man das Signal nicht vorher
+        bandbegrenzt hat, können Aliasing-Verzerrungen hörbar werden. Modifiziere wave_io dahingehend, dass vom
+        eingelesenen Audiosignal jeder zweite Abtastwert verworfen wird und das resultierende Signal abgespeichert wird.
+        Der Header muss natürlich entsprechend verändert werden</b></p>
+    <img src="./pics/Ubung 1/2eCode.png" alt="Code konnte nicht geladen werden">
+    <br>	
+	<h4><a id="2f">Aufgabe 2f</a></h4>
+    <p><b>Wende das erstellte Programm auf die von mir geschickten Sinusdateien an (sine_hiXX.wav und sine_loXX.wav) an.
+        Welche Frequenzen erscheinen nach dem Down-Sampling? Was würde passieren, wenn man geeignet bandbegrenzen würde?
+    </b></p>
+    <p>sine_hi02_downsampled.wav</p>
+    <audio controls>
+        <source src="./audio/sinehi_ds.wav" type="audio/wav"></audio> <br>
+        <img src="./pics/Ubung 1/sinehi_ds.png" alt="Graph konnte nicht geladen werden">
+
+    <p> 5kHz - 3kHz = 2kHz
+    </p>
+    <br>
+    <p>sine_lo02_downsampled.wav</p>
+    <audio controls>
+        <source src="./audio/sinelo_ds.wav" type="audio/wav"></audio> <br>
+    <img src="./pics/Ubung 1/sinelo_ds.png" alt="Graph konnte nicht geladen werden">
+
+    <p>500Hz bleiben 500Hz</p>
+    <br>
+    <h4><a id="2g">Aufgabe 2g</a></h4>
+    <p><b>Nun wende das Downsampling auf deine Sprachdatei an und beschreibe, wie sich der Klang
+        verändert. Erkläre, warum das passiert! 
+    </b></p>
+    <audio controls >
+        <source src="./audio/Sprache_Übungsgruppe03_ds.wav" type="audio/wav"></audio>
+        <p>
+            Durch das Downsampling gehen bei der Audiodatei Informationen verloren. Weil man danach nurnoch die Hälfte der Samples behält, hört sich die Sprache dumpf an.
+        </p>
+    <br>
+	
+	<h1><a id="3">Aufgabe 3</a></h1>
+    <br>
+    <h4><a id="3a">Aufgabe 3a</a></h4>
+    <p><b>Die herkömmlichen PC-Soundkarten arbeiten meist entweder mit 16 oder 8 Bit-Auflösung. Wie groß ist die Anzahl bei
+        diesen beiden Werten darstellbaren Amplitudenwerten?
+    </b></p>
+    <p>Die Anzahl der darstellbaren Amplitudenwerte:
+		8-Bit-Auflösung  256 (2^8)
+		16-Bit-Auflösung 65536(2^16
+		)</p>
+    <br>
+    <h4><a id="3b">Aufgabe 3b</a></h4>
+    <p><b>Modifiziere wave_io dahingehend, dass die Bitanzahl reduziert wird. Dazu werden alle Samples durch eine Potenz
+        von 2 geteilt (Integer-Division ohne Rest). Damit das resultierende Signal nicht leiser wird als das Original,
+        wird die Operation durch Multiplikation mit derselben 2er Potenz kompensiert. Zu beachten: Der Datentyp hat nach
+        wie vor 16 Bit!
+    </b></p>
+    <img src="./pics/Ubung 1/3b.png" alt="Graph konnte nicht geladen werden">
+    
+    <br>
+    <h4><a id="3c">Aufgabe 3c</a></h4>
+    <p><b>Mit dem entstandenen Programm sollen nun die in Aufgabe1 erzeugten Wave-Dateien (Sprache und Musik) Bitreduziert
+        werden. Ab welcher Bitanzahl tritt eine hörbare, also deutliche Verschlechterung der Qualität ein? Bei wie viel
+        Bit ist das Sprachsignal noch verständlich?
+    </b></p>
+    <h3>Sprache</h3>
+    <p>Keine Bit Reduzierung</p>
+    <audio controls>
+        <source src="audio/Sprache_03.wav" type="audio/wav"></audio>
+    <p>6 Bit Reduzierung </p>
+    <audio controls>
+        <source src="./audio/6_Sprache_Übungsgruppe03.wav" type="audio/wav"></audio> <br>
+    <p>8 Bit Reduzierung </p>
+    <audio controls>
+        <source src="./audio/8_Sprache_Übungsgruppe03.wav" type="audio/wav"></audio> <br>  
+    <p>12 Bit Reduzierung </p>
+    <audio controls>
+        <source src="./audio/12_Sprache_Übungsgruppe03.wav" type="audio/wav"></audio> <br>  
+    <h3>Quantisierungsrauschen</h3>
+    <p>In Reihenfolge Raw, um 6 Bit reduziert, um 8 Bit reduziert, um 12 Bit reduziert</p>
+    <img src="./pics/Ubung 1/Raw_Sprache.png" alt="Graph konnte nicht geladen werden"><br>
+    <img src="./pics/Ubung 1/6BitSprache.png" alt="Graph konnte nicht geladen werden"><br>
+    <img src="./pics/Ubung 1/8BitSprache.png" alt="Graph konnte nicht geladen werden"><br>
+    <img src="./pics/Ubung 1/12BitSprache.png" alt="Graph konnte nicht geladen werden"><br>
+
+    <h3>Musik</h3>
+    <p>Keine Bit Reduzierung</p>
+    <audio controls>
+        <source src="audio/Musik_03.wav" type="audio/wav"></audio>
+    <p>7 Bit Reduzierung</p>
+    <audio controls>
+        <source src="./audio/7_Musik_Übungsgruppe03.wav" type="audio/wav"></audio> <br>
+    <p>8 Bit Reduzierung</p>
+    <audio controls>
+        <source src="./audio/8_Musik_Übungsgruppe03.wav" type="audio/wav"></audio> <br>
+    <p>10 Bit Reduzierung</p>
+    <audio controls>
+        <source src="./audio/10_Musik_Übungsgruppe03.wav" type="audio/wav"></audio> <br>
+    <p>13 Bit Reduzierung</p>
+    <audio controls>
+        <source src="./audio/13_Musik_Übungsgruppe03.wav" type="audio/wav"></audio> <br>
+    <h3>Quantisierungsrauschen</h3>
+    <p>In Reihenfolge Raw, um 7 Bit reduziert, um 8 Bit reduziert, um 10 Bit reduziert, um 13 Bit reduziert</p>
+    <img src="./pics/Ubung 1/RawMusik.png" alt="Graph konnte nicht geladen werden"><br>
+    <img src="./pics/Ubung 1/07_Musik.png" alt="Graph konnte nicht geladen werden"><br>
+    <img src="./pics/Ubung 1/08_Musik.png" alt="Graph konnte nicht geladen werden"><br>
+    <img src="./pics/Ubung 1/10_Musik.png" alt="Graph konnte nicht geladen werden"><br>
+    <img src="./pics/Ubung 1/13Musik.png" alt="Graph konnte nicht geladen werden"><br>
+   
+    <h4><a id="3d">Aufgabe 3d</a></h4>
+    <p><b>Was charakterisiert das entstehende Quantisierungsgeräusch bei der Bitreduzierung und macht es besonders störend?</b></p>
+    <p>Durch die Ganzzahldivision kommt es zu Rundungsfehlern, die sich als Quantisierungsrauschen äußert.</p>
+    <h4><a id="3e">Aufgabe3e</a></h4>
+    <p><b>Modifiziere dein Programm noch einmal so, dass auch das Differenzsignal zwischen Original und Bitreduziertem
+        Signal, d.h. der Quantisierungsfehler ausgegeben werden kann. Dabei musst du bedenken, dass z.B. bei der 1 Bit
+        Reduzierung das Quantisierungsrauschen nur von -1 bis +1 verlaufen würde. Dieser Wertebereich wäre viel zu
+        klein, als dass man das Rauschen beim Abspielen als 16Bit-Wert noch hören könnte. Daher muss das Rauschen durch
+        Multiplikation mit einer 2er Potenz verstärkt werden. In anderen Worten: Hat man vorher durch 2^n geteilt,
+        sollte man das Differenzsignal vor dem Abspeichern mit 2^(16-n-1) multiplizieren. So ist sichergestellt, dass
+        der Verstärkungsfaktor mit der Anzahl der gelöschten Bits kleiner wird.
+    </b></p>
+    <img src="./pics/Ubung 1/3ECode.png" alt="Graph konnte nicht geladen werden"><br><br><br>
+    <audio controls>
+        <source src="./audio/8_quan_Sprache_Übungsgruppe03.wav" type="audio/wav">
+    </audio> <br>
+    <img src="./pics/Ubung 1/08_Sprache_3E.png" alt="Graph konnte nicht geladen werden"><br><br><br>
+    <audio controls>
+        <source src="./audio/6_quan_Sprache_Übungsgruppe03.wav" type="audio/wav">
+    </audio> <br>
+    <img src="./pics/Ubung 1/3F_06_Sprache.png" alt="Graph konnte nicht geladen werden"><br><br><br>
+    <audio controls>
+        <source src="./audio/12_quan_Sprache_Übungsgruppe03.wav" type="audio/wav">
+    </audio> <br>
+    <img src="./pics/Ubung 1/3F_Sprach12.png" alt="Graph konnte nicht geladen werden"><br><br><br>
+    <audio controls>
+        <source src="./audio/7_quan_Musik_Übungsgruppe03.wav" type="audio/wav">
+    </audio> <br>
+    <img src="./pics/Ubung 1/07_Musik_3F.png" alt="Graph konnte nicht geladen werden"><br><br><br>
+    <audio controls>
+        <source src="./audio/8_quan_Musik_Übungsgruppe03.wav" type="audio/wav">
+    </audio> <br>
+    <img src="./pics/Ubung 1/08_Musik_3E.png" alt="Graph konnte nicht geladen werden"><br><br><br>
+    <audio controls>
+        <source src="./audio/10_quan_Musik_Übungsgruppe03.wav" type="audio/wav"></audio> <br>
+    <img src="./pics/Ubung 1/3F_Musik10.png" alt="Graph konnte nicht geladen werden"><br><br><br>
+    <audio controls>
+        <source src="./audio/13_quan_Musik_Übungsgruppe03.wav" type="audio/wav"></audio> <br>
+    <img src="./pics/Ubung 1/3F_Musik13.png" alt="Graph konnte nicht geladen werden"><br><br><br>
+    
+    <h4><a id="3f">Aufgabe 3 f.</a></h4>
+    <p><b>Welchen Charakter hat das Rauschen bei einer Reduktion um 1Bit und wie verändert es sich bei zunehmender
+        Bit-Reduktion?
+    </b></p>
+    <p>Das Rauschen wird langanhaltender wenn es um 1 Bit reduziert wird. 
+		Umso stärker die Reduktion desto ungleichmäßiger ist der Charakter.
+		Außerdem wird das Rauschen stärker, die originale Audio schlechter zu verstehen bis zu
+		Aussetzern oder es verschwindet ganz.</p>
+
+
+
+
+</body>
+</html>

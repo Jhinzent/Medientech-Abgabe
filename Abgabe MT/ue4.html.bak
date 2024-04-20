@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Übung 4</title>
+    <link rel="stylesheet" type="text/css" href="format.css">
+    <link rel="stylesheet" type="text/css" href="formatue3.css">
+</head>
+
+<body>
+
+    <iframe src="oben.html" width="1920" height="1080" name="IFrame3" id="IFrame3" scrolling="no" frameborder="0">
+        <p>Ihr Browser kann leider keine eingebetteten Frames anzeigen: Sie können die eingebettete Seite aber
+            den
+            folgenden.</p>
+    </iframe>
+
+    <h2>Übung 4</h2>
+    <br>
+    <h3>Aufgabe 1a</h3>
+    <h3>Aufgabe 1a</h3>
+    <p>RGB ist der gebräuchlichste Farbraum bei der Aufzeichnung und Darstellung von Bildern. Hier wird das<br>
+        Lichtspektrum in seine Rot-, Grün- und Blauanteile aufgespalten. Der YCbCr Farbraum hingegen besteht aus<br>
+        der Luminanz Y (Helligkeit) und den Farbanteilen (Chrominanz) Cb und Cr. Die RGB Farben eines Bildes<br>
+        lassen sich also in den YCbCr Farbraum transformieren. Für viele Anwendungen, z.B. die Bildkompression,<br>
+        ist es günstig, Helligkeits- und Farbinformation getrennt zu verarbeiten. Nenne den physiologischen Grund<br>
+        dafür!</p>
+    <h6>Lösung</h6>
+    <p>Der Grund ist, dass jeder Mensch die Farben unterschiedlich wahrnehmen tut. Zum Beispiel reagiert der eine viel empfindlicher auf die Grüntöne, <br>
+		als auf Rottöne. Oder empfindlicher auf die Blautöne, als ein anderer Mensch. Die Helligkeit hingegen speichert viele Informationen, diese kann 
+		das Auge besser differenzieren, als die Farbunterschiede.</p>
+
+
+    <br>
+    <h3>Aufgabe 1b</h3>
+    <p>Erstelle aus deinem eigenen Bild Versionen, die nur jeweils den Rot-, Grün- und Blauanteil zeigen.<br>
+        (Hinweis: Dazu müssen einfach die jeweils anderen Farbwerte auf null gesetzt werden). </p>
+    <h6>Lösung</h6>
+	<p>Orignalbilder</p>
+    <img width="800" src="pics/Ubung 2/raw/nature_uebungsgruppe03.bmp" alt="Bild konnte nicht geladen werden">
+	<img width="800" src="pics/Ubung 2/raw/manmade_uebungsgruppe03.bmp" alt="Bild konnte nicht geladen werden">
+    <p>Code Rot</p>
+    <img width="800" src="pics/Ubung 4/CodeRot.png" alt="Bild konnte nicht geladen werden">
+    <p>Bilder Rot</p>
+    <img width="800" src="pics/Ubung 4/naturered.bmp" alt="Bild konnte nicht geladen werden">
+	<img width="800" src="pics/Ubung 4/manmadered.bmp" alt="Bild konnte nicht geladen werden">
+    <p>Code Grün</p>
+    <img width="800" src="pics/Ubung 4/CodeGruen.png" alt="Bild konnte nicht geladen werden">
+    <p>Bilder Grün</p>
+    <img width="800" src="pics/Ubung 4/naturegreen.bmp" alt="Bild konnte nicht geladen werden">
+	<img width="800" src="pics/Ubung 4/manmadegreen.bmp" alt="Bild konnte nicht geladen werden">
+    <p>Code Blau</p>
+    <img width="800" src="pics/Ubung 4/CodeBlau.png" alt="Bild konnte nicht geladen werden">
+    <p>Bilder Blau</p>
+    <img width="800" src="pics/Ubung 4/natureblue.bmp" alt="Bild konnte nicht geladen werden">
+	<img width="800" src="pics/Ubung 4/manmadeblue.bmp" alt="Bild konnte nicht geladen werden">
+
+    <br>
+    <h3>Aufgabe 1c</h3>
+    <p>Nun erzeuge jeweils ein Bild für Y, Cb und Cr. Lese dafür jedes Pixel ein und berechne die Helligkeit Y<br>
+        (Luminanzformel!) sowie die Chrominanzen Cb und Cr (Chrominanzformeln!) aus den RGB Werten.</p>
+    <h6>Lösung</h6>
+    <p>Code Luminanz</p>
+    <img width="800" src="pics/Ubung 4/CodeLum.png" alt="Bild konnte nicht geladen werden">
+    <p>Bilder Luminanz</p>
+    <img width="800" src="pics/Ubung 4/LumNature.bmp" alt="Bild konnte nicht geladen werden">
+	<img width="800" src="pics/Ubung 4/LuminanzManmade.bmp" alt="Bild konnte nicht geladen werden">
+    <p>Code Blue-Yellow Chrominance</p>
+    <img width="800" src="pics/Ubung 4/CodeCb.png" alt="Bild konnte nicht geladen werden">
+    <p>Bild Blue-Yellow Chrominance</p>
+    <img width="800" src="pics/Ubung 4/byChromeNature.bmp" alt="Bild konnte nicht geladen werden">
+	<img width="800" src="pics/Ubung 4/byChromeManmade.bmp" alt="Bild konnte nicht geladen werden">
+    <p>Code Red-Green Chrominance</p>
+    <img width="800" src="pics/Ubung 4/CodeCr.png" alt="Bild konnte nicht geladen werden">
+    <p>Bild Red-Green Chrominance</p>
+    <img width="800" src="pics/Ubung 4/rgChromeNature.bmp" alt="Bild konnte nicht geladen werden">
+	 <img width="800" src="pics/Ubung 4/rgChromeManmade.bmp" alt="Bild konnte nicht geladen werden">
+
+    <br>
+    <h3>Aufgabe 1d</h3>
+    <p>Wandle zur Rekonstruktion deines Bildes die YCbCr Werte zurück in RGB.</p>
+    <h6>Lösung</h6>
+    <p>Code</p>
+    <img width="800" src="pics/Ubung 4/CodeYCbCr.png" alt="Bild konnte nicht geladen werden">
+    <p>Rekonstruierte Bilder</p>
+    <img width="800" src="pics/Ubung 4/RecNature.bmp" alt="Bild konnte nicht geladen werden">
+	<img width="800" src="pics/Ubung 4/RecManmade.bmp" alt="Bild konnte nicht geladen werden">
+
+    <br>
+    <h3>Aufgabe 2</h3>
+    <p>Mithilfe eines Histogramms kann die Verteilung (Häufigkeit) der Helligkeiten eines Bildes dargestellt<br>
+        werden. Erstelle ein Histogramm für das monochrome Detailbild aus Aufgabe 1 (Y - Bild). Lese dafür den<br>
+        Helligkeitswert der Pixel ein und bestimme die Helligkeitshäufigkeiten (Anzahl gleicher Helligkeiten). Diese<br>
+        sollen in eine Textdatei geschrieben und als Histogramm dargestellt werden (z.B. in Excel, Java). </p>
+    <h6>Lösung</h6>
+    <p>Code</p>
+    <img width="800" src="pics/Ubung 4/Code2.png" alt="Bild konnte nicht geladen werden">
+    <p>Histogramm</p>
+	<p>Nature</p>
+    <img width="800" src="pics/Ubung 4/HistogramNature.png" alt="Bild konnte nicht geladen werden">
+	<br>
+	<p>Manmade</p>
+	<img width="800" src="pics/Ubung 4/HistogramManmade.png" alt="Bild konnte nicht geladen werden">
+
+    <br>
+    <h3>Aufgabe 3a</h3>
+    <p>Berechne die mittlere Helligkeit des monochromen Detailbildes aus Aufgabe 1 (Y - Bild). Lese dafür den<br>
+        Helligkeitswert der Pixel ein. Die mittlere Helligkeit ist die Summe aller Helligkeitswerte geteilt durch
+        die<br>
+        Anzahl der Bildpunkte. Berechne auch den Kontrast des Bildes, d.h. die Standardabweichung der Helligkeit.</p>
+    <h6>Lösung</h6>
+    <p>Code</p>
+    <img width="800" src="pics/Ubung 4/Code3a.png" alt="Bild konnte nicht geladen werden">
+	<p>Nature</p>
+    <p>62024163 / 1764400 = ~119,645<br>
+        Der Mittelwert beträgt ca. 119,65<br>
+        <br>
+        sqrt(1617892432 / 1764400) = ~55,865<br>
+        Die Standardabweichung beträgt ca. 55,87</p>
+	<p>Manmade</p>
+    <p>55640252 / 1764400 = ~107,331<br>
+        Der Mittelwert beträgt ca. 107,33<br>
+        <br>
+        sqrt(1160485131 / 1764400) = ~47,314<br>
+        Die Standardabweichung beträgt ca. 47,31</p>
+
+    <br>
+    <h3>Aufgabe 3b</h3>
+    <p>Verändere das monochrome Bild in der Helligkeit durch Subtrahieren der Werte h=(-20, -40, -60, -80)<br>
+        bzw. Addieren der Werte h=(20, 40, 60, 80). Beachte dabei, dass ihr beim Ergebnis der Pixelwert-<br>
+        berechnung im 8-Bit-Bereich bleibt. Berechne die Histogramme des hellsten und dunkelsten Bildes.</p>
+    <h6>Lösung</h6>
+    <p>Code</p>
+    <img width="800" src="pics/Ubung 4/Code3b.png" alt="Bild konnte nicht geladen werden">
+	<p>Nature</p>
+    <p>h = 20</p>
+    <img width="800" src="pics/Ubung 4/h20Nature.bmp" alt="Bild konnte nicht geladen werden">
+    <p>h = 40</p>
+    <img width="800" src="pics/Ubung 4/h40Nature.bmp" alt="Bild konnte nicht geladen werden">
+    <p>h = 60</p>
+    <img width="800" src="pics/Ubung 4/h60Nature.bmp" alt="Bild konnte nicht geladen werden">
+    <p>h = 80</p>
+    <img width="800" src="pics/Ubung 4/h80Nature.bmp" alt="Bild konnte nicht geladen werden">
+    <p>h = -20</p>
+    <img width="800" src="pics/Ubung 4/h-20Nature.bmp" alt="Bild konnte nicht geladen werden">
+    <p>h = -40</p>
+    <img width="800" src="pics/Ubung 4/h-40Nature.bmp" alt="Bild konnte nicht geladen werden">
+    <p>h = -60</p>
+    <img width="800" src="pics/Ubung 4/h-60Nature.bmp" alt="Bild konnte nicht geladen werden">
+    <p>h = -80</p>
+    <img width="800" src="pics/Ubung 4/h-80Nature.bmp" alt="Bild konnte nicht geladen werden">
+    <p>Histogramm</p>
+	<p>h=80</p>
+    <img width="800" src="pics/Ubung 4/H80NatureHistogram.png" alt="Bild konnte nicht geladen werden">
+	<p>h=-80</p>
+    <img width="800" src="pics/Ubung 4/H-80NatureHistogram.png" alt="Bild konnte nicht geladen werden">
+	<br>
+	<p>Manmade</p>
+	<p>h = 20</p>
+    <img width="800" src="pics/Ubung 4/h20Manmade.bmp" alt="Bild konnte nicht geladen werden">
+    <p>h = 40</p>
+    <img width="800" src="pics/Ubung 4/h40Manmade.bmp" alt="Bild konnte nicht geladen werden">
+    <p>h = 60</p>
+    <img width="800" src="pics/Ubung 4/h60Manmade.bmp" alt="Bild konnte nicht geladen werden">
+    <p>h = 80</p>
+    <img width="800" src="pics/Ubung 4/h80Manmade.bmp" alt="Bild konnte nicht geladen werden">
+    <p>h = -20</p>
+    <img width="800" src="pics/Ubung 4/h-20Manmade.bmp" alt="Bild konnte nicht geladen werden">
+    <p>h = -40</p>
+    <img width="800" src="pics/Ubung 4/h-40Manmade.bmp" alt="Bild konnte nicht geladen werden">
+    <p>h = -60</p>
+    <img width="800" src="pics/Ubung 4/h-60Manmade.bmp" alt="Bild konnte nicht geladen werden">
+    <p>h = -80</p>
+    <img width="800" src="pics/Ubung 4/h-80Manmade.bmp" alt="Bild konnte nicht geladen werden">
+    <p>Histogramm</p>
+	<p>h=80</p>
+    <img width="800" src="pics/Ubung 4/H80ManmadeHistogram.png" alt="Bild konnte nicht geladen werden">
+	<p>h=-80</p>
+    <img width="800" src="pics/Ubung 4/H-80ManmadeHistogram.png" alt="Bild konnte nicht geladen werden">
+
+    <br>
+    <h3>Aufgabe 3c</h3>
+    <p>Erhöhe bzw. verringere den Kontrast durch Multiplikation mit den Faktoren k=(0.2, 0.4, 0.8, 1.0) sowie<br>
+        k=(1.5, 2.5, 5.0, 10.0). Was würde bei einer Kontraständerung mit k < 0 passieren (Einfach ausprobieren und
+            Bild<br>
+            speichern!)? Berechne auch hier das Histogramm des kontrastärmsten und kontrastreichsten Bildes und<br>
+            vergleiche mit denen der Helligkeitsänderung. Was haben Helligkeits- und Kontraständerung für eine<br>
+            Auswirkung auf das Histogramm (Vergleiche auch mit dem Histogramm aus Aufgabe 2)?</p>
+    <h6>Lösung</h6>
+    <p>Code</p>
+    <img width="800" src="pics/Ubung 4/Code3c.png" alt="Bild konnte nicht geladen werden">
+    <p>Bilder</p>
+	<p>Nature</p>
+    <p>k = 0,2</p>
+    <img width="800" src="pics/Ubung 4/0.2Nature.bmp" alt="Bild konnte nicht geladen werden">
+    <p>k = 0,4</p>
+    <img width="800" src="pics/Ubung 4/0.4Nature.bmp" alt="Bild konnte nicht geladen werden">
+    <p>k = 0,8</p>
+    <img width="800" src="pics/Ubung 4/0.8Nature.bmp" alt="Bild konnte nicht geladen werden">
+    <p>k = 1</p>
+    <img width="800" src="pics/Ubung 4/1.0Nature.bmp" alt="Bild konnte nicht geladen werden">
+    <p>k = 2,5</p>
+    <img width="800" src="pics/Ubung 4/2.5Nature.bmp" alt="Bild konnte nicht geladen werden">
+    <p>k = 5</p>
+    <img width="800" src="pics/Ubung 4/5.0Nature.bmp" alt="Bild konnte nicht geladen werden">
+    <p>k = 10</p>
+    <img width="800" src="pics/Ubung 4/10.0Nature.bmp" alt="Bild konnte nicht geladen werden">
+    <p>Histogramm</p>
+	<p>k=0.2</p>
+    <img width="800" src="pics/Ubung 4/0.2NatureHistogram.png" alt="Bild konnte nicht geladen werden">
+	<p>k=10</p>
+    <img width="800" src="pics/Ubung 4/10NatureHistogram.png" alt="Bild konnte nicht geladen werden">
+	
+	<p>Manmade</p>
+    <p>k = 0,2</p>
+    <img width="800" src="pics/Ubung 4/0.2Manmade.bmp" alt="Bild konnte nicht geladen werden">
+    <p>k = 0,4</p>
+    <img width="800" src="pics/Ubung 4/0.4Manmade.bmp" alt="Bild konnte nicht geladen werden">
+    <p>k = 0,8</p>
+    <img width="800" src="pics/Ubung 4/0.8Manmade.bmp" alt="Bild konnte nicht geladen werden">
+    <p>k = 1</p>
+    <img width="800" src="pics/Ubung 4/1.0Manmade.bmp" alt="Bild konnte nicht geladen werden">
+    <p>k = 2,5</p>
+    <img width="800" src="pics/Ubung 4/2.5Manmade.bmp" alt="Bild konnte nicht geladen werden">
+    <p>k = 5</p>
+    <img width="800" src="pics/Ubung 4/5.0Manmade.bmp" alt="Bild konnte nicht geladen werden">
+    <p>k = 10</p>
+    <img width="800" src="pics/Ubung 4/10.0Manmade.bmp" alt="Bild konnte nicht geladen werden">
+    <p>Histogramm</p>
+	<p>k=0.2</p>
+    <img width="800" src="pics/Ubung 4/0.2ManmadeHistogram.png" alt="Bild konnte nicht geladen werden">
+	<p>k=10</p>
+    <img width="800" src="pics/Ubung 4/10ManmadeHistogram.png" alt="Bild konnte nicht geladen werden">
+    <p>Wenn man die Histogramme von Helligkeit h = 80 und von Kontrast k = 10 miteinander vergleicht, ist recht schnell<br>
+    ersichtlich, dass die Helligkeit eine mehr oder weniger gleichmäßige Verschiebung in positiver Richtung durchführt.<br>
+    Sprich, der dunkelste Wert ist deutlich höher als im Originalbild, aber es gibt auch Zwischenstufen zwischen den<br>
+    beiden Extremen (niedrigster und höchster Wert). <br>
+    Anders ist es jedoch bei dem Histogrammen des Kontrastwertes. Dort gibt es zwischen den beiden Extremen nahezu keine<br>
+    Zwischenstufen und sind im vergleich der Spitzen deutlich geringer. Außerdem sind die Spitzen am Anfang und Ende<br>
+    des Sprektrum lokalisiert. Es gibt nahezu nur entweder komplett Schwarz oder komplett weiß.</p>
+    <br>
+    <p>k = -1   &   k = 1</p>
+	<p>Nature</p>
+    <img width="800" src="pics/Ubung 4/k-1Nature.bmp" alt="Bild konnte nicht geladen werden">
+    <img width="800" src="pics/Ubung 4/1.0Nature.bmp" alt="Bild konnte nicht geladen werden">
+	<p>Manmade</p>
+    <img width="800" src="pics/Ubung 4/k-1Manmade.bmp" alt="Bild konnte nicht geladen werden">
+    <img width="800" src="pics/Ubung 4/1.0Manmade.bmp" alt="Bild konnte nicht geladen werden">
+    <p>
+        Bei einem Kontrastwert von k < 0 wird die Luminanz des positiven Gegenwerts (k > 0) invertiert. Dies zeigt sich auch in den Histogrammen.
+    </p>
+	<p>Nature</p>
+	<p>k=-1</p>
+    <img width="800" src="pics/Ubung 4/k-1NatureHistogram.png" alt="Bild konnte nicht geladen werden">
+	<p>k=1</p>
+    <img width="800" src="pics/Ubung 4/k1NatureHistogram.png" alt="Bild konnte nicht geladen werden">
+	<p>Manmade</p>
+	<p>k=-1</p>
+    <img width="800" src="pics/Ubung 4/k-1ManmadeHistogram.png" alt="Bild konnte nicht geladen werden">+
+	<p>k=1</p>
+    <img width="800" src="pics/Ubung 4/k1ManmadeHistogram.png" alt="Bild konnte nicht geladen werden">
+</body>
+</html>

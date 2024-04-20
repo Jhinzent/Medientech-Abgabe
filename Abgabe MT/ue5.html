@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Übung 5</title>
+    <link rel="stylesheet" type="text/css" href="formatue5.css">
+    <link rel="stylesheet" type="text/css" href="formatue3.css">
+</head>
+
+<body>
+
+    <iframe src="oben.html" width="800" height="120" name="IFrame3" id="IFrame3" scrolling="no" frameborder="0">
+        <p>Ihr Browser kann leider keine eingebetteten Frames anzeigen: Sie können die eingebettete Seite aber
+            den
+            folgenden.</p>
+    </iframe>
+
+    <h2>Übung 5</h2>
+    <br>
+    <h3>Aufgabe 1a</h3>
+    <p>Zunächst sollt ihr eure Musikdatei um die Verstärkung 3, 6 und 9dB verstärken. Dies<br>
+        realisiert ihr durch Multiplikation der Abtastwerte mit dem linearen Verstärkungsfaktor F, den<br>
+        ihr zunächst aus der Verstärkung in dB berechnen müsst.<br>
+        Dabei wird es bei hoher Verstärkung zwangsläufig zu einem sogenannten Clipping kommen, d.h.<br>
+        das Produkt aus der Originalamplitude und dem Verstärkungsfaktor ist betragsmäßig größer als<br>
+        der maximal darstellbare Amplitudenwert (bei 16 bit < -32768 bzw.> 32767). In diesem Fall<br>
+            muss dafür gesorgt werden, dass der resultierende Wert auf genau -32768, bzw. 32767 gesetzt<br>
+            wird. Clipping ist akustisch als immer stärker werdende Verzerrung des Musiksignals<br>
+            wahrnehmbar.</p>
+    <h6>Code</h6>
+    <img width="800" src="pics/Ubung 5/1aCode.png" alt="Bild konnte nicht geladen werden">
+    <h6>Lösung</h6>
+    <p>Verstärkung um 3db</p>
+    <audio controls>
+        <source src="audio/Ubung 5/Musik3db.wav">
+    </audio>
+    <p>Verstärkung um 6db</p>
+    <audio controls>
+        <source src="audio/Ubung 5/Musik6db.wav">
+    </audio>
+    <p>Verstärkung um 9db</p>
+    <audio controls>
+        <source src="audio/Ubung 5/Musik9db.wav">
+    </audio>
+    <p>Verstärkung um 12db</p>
+    <audio controls>
+        <source src="audio/Ubung 5/Musik12db.wav">
+    </audio>
+    <p>Original</p>
+    <img width="800" src="pics/Ubung 5/musicOriginal.png" alt="Bild konnte nicht geladen werden">
+	<p>12db Verstärkung</p>
+    <img width="800" src="pics/Ubung 5/Music12db.png" alt="Bild konnte nicht geladen werden">
+	<p>geclippter bereich</p>
+	<img src="pics/Ubung 5/music12dbclipped.png" alt="Bild konnte nicht geladen werden">
+    <br>
+    <h3>Aufgabe 1b</h3>
+    <p>Bei welcher Verstärkung wird eine Verzerrung wahrnehmbar?</p>
+    <h6>Lösung</h6>
+    <p>Die Verzerrung war für Dustin schon ab 9db zu hören, ab 12db konnten wir die Verzerrung dann alle hören.</p>
+    <br>
+    <h3>Aufgabe 1c</h3>
+    <p>Ihr sollt nun die 1kHz-Sinusschwingung um 6, 9 und 12 dB verstärken und den<br>
+        resultierenden Klirrfaktor k berechnen. Der Klirrfaktor lässt sich aus dem Frequenzspektrum<br>
+        berechnen (GRAM: FFT Size 512, Praat: Analyse Spectrum ..., alle sichtbaren Obertöne für die<br>
+        Berechnung berücksichtigen!).<br>
+        Beachte: Die dB-Angaben der Amplituden aus GRAM müssen vor dem Einsetzen in die<br>
+        Klirrfaktor-Formel in lineare Angaben, d.h. die An , umgerechnet werden.</p>
+    <h6>Lösung</h6>
+	<p>Original</p>
+    <audio controls>
+        <source src="audio/Ubung 5/sine_1k_03.wav">
+    </audio>
+	<br>
+	<img width="800" src="pics/Ubung 5/SpecSineOrig.png" alt="Bild konnte nicht geladen werden">
+	<p>Verstärkung um 6db</p>
+    <audio controls>
+        <source src="audio/Ubung 5/sine_1k_6db.wav">
+    </audio>
+	<br>
+	<img width="800" src="pics/Ubung 5/SpecSine6db.png" alt="Bild konnte nicht geladen werden">
+	<p>Verstärkung um 9db</p>
+    <audio controls>
+        <source src="audio/Ubung 5/sine_1k_9db.wav">
+    </audio>
+	<br>
+	<img width="800" src="pics/Ubung 5/SpecSine9db.png" alt="Bild konnte nicht geladen werden">
+	<p>Verstärkung um 12db</p>
+    <audio controls>
+        <source src="audio/Ubung 5/sine_1k_12db.wav">
+    </audio>
+	<br>
+	<img width="800" src="pics/Ubung 5/SpecSine12db.png" alt="Bild konnte nicht geladen werden">
+	<p>da bei uns mit einer verstärkung von 15db noch kein Klirrfaktor berechnet werden konnte haben wir die verstärkung auf 15db erhöhen müssen um den Klirrfaktor zu berechnen zu können</p>
+	<p>Verstärkung um 15db</p>
+    <audio controls>
+        <source src="audio/Ubung 5/sine_1k_15db.wav">
+    </audio>
+	<br>
+	<img width="800" src="pics/Ubung 5/SpecSine15db.png" alt="Bild konnte nicht geladen werden">
+	<p>Berechnung des Klirrfaktors:</p><br>
+	<p>Wurzel(60db^2 + 40db^2)/60db = 1,20</p><br>
+	<p>In %te umrechnen:</p><br>
+	<p>100*1,20=120%</p>
+        
+    <br>
+    <h3>Aufgabe 2a</h3>
+    <p>Implementiert ein Echo mit einer Verzögerung von 10, 100 und 200ms und dem<br>
+        Verstärkungsfaktor a = 0.6. Um wie viele Abtastwerte N müssen wir verzögern, wenn wir mit<br>
+        einer Abtastrate von 44.1 kHz arbeiten?</p>
+    <h6>Code</h6>
+    <img src="pics/Ubung 5/2aCode.png" alt="Bild konnte nicht geladen werden">
+    <h6>Lösung</h6>
+    <p>N = t * fa<br>
+        10ms: N = 0,01 * 44100 = 411<br>
+        100ms: N = 0,1 * 44100 = 4410<br>
+        200ms: N = 0,2 * 44100 = 8820<br>
+        Bei zwei Kanälen sollte N = 2N sein</p>
+    <br>
+    <h3>Aufgabe 2b</h3>
+    <p>Wendet das Echo auf eure Sprach- und Musiksignal an. Es kann sein, dass die 10ms nur bei<br>
+        einem recht trockenen Soundfile wie der Sprachaufnahme hörbar werden.<br>
+        Hinweis: Bei Stereodateien muss berücksichtigt werden, dass linker und rechter Kanal getrennt<br>
+        verzögert werden müssen. Die Samples für links und rechts liegen im Samplearray jeweils<br>
+        hintereinander.</p>
+    <h6>Lösung</h6>
+    <table>
+        <tbody>
+            <tr>
+                <td>Originale Sprache:</td>
+                <td><audio controls>
+                        <source src="audio/Sprache_03.wav">
+                    </audio></td>
+            </tr>
+            <tr>
+                <td>10ms</td>
+                <td><audio controls>
+                        <source src="audio/Ubung 5/Sprache10ms.wav">
+                    </audio></td>
+            </tr>
+            <tr>
+                <td>100ms</td>
+                <td><audio controls>
+                        <source src="audio/Ubung 5/Sprache100ms.wav">
+                    </audio></td>
+            </tr>
+            <tr>
+                <td>200ms</td>
+                <td><audio controls>
+                        <source src="audio/Ubung 5/Sprache200ms.wav">
+                    </audio></td>
+            </tr>
+            <tr>
+                <td>Original Musik</td>
+                <td><audio controls>
+                        <source src="audio/musik_03.wav">
+                    </audio></td>
+            </tr>
+            <tr>
+                <td>10ms</td>
+                <td><audio controls>
+                        <source src="audio/Ubung 5/Musik10ms.wav">
+                    </audio></td>
+            </tr>
+            <tr>
+                <td>100ms</td>
+                <td><audio controls>
+                        <source src="audio/Ubung 5/Musik100ms.wav">
+                    </audio></td>
+            </tr>
+            <tr>
+                <td>200ms</td>
+                <td><audio controls>
+                        <source src="audio/Ubung 5/Musik200ms.wav">
+                    </audio></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br>
+    <h3>Aufgabe 3a</h3>
+    <p>Ein sehr einfaches Filter kann man z.B. mit der Zuordnungsvorschrift<br>
+        y(k) = 0.5 * x(i) + 0.45 * x(i-1)<br>
+        realisieren. Programmiert das Filter und vergleicht die Musikdatei vor und nach der Filterung.<br>
+        Tut dasselbe mit der Zuordnungsvorschrift<br>
+        y(k) = 0.5 * x(i) - 0.45 * x(i-1)</p>
+    <h6>Code</h6>
+    <img src="pics/Ubung 5/3aCode.png" alt="Bild konnte nicht geladen werden">
+    <h6>Lösung</h6>
+    <h6>Original</h6>
+    <img width="800" src="pics/Ubung 5/SpecMusikOrig.png" alt="Bild konnte nicht geladen werden"><br>
+    <audio controls>
+        <source src="audio/musik_03.wav">
+    </audio>
+    <h6>Hoch</h6>
+    <img width="800" src="pics/Ubung 5/SpecMusikHoch.png" alt="Bild konnte nicht geladen werden"><br>
+    <audio controls>
+        <source src="audio/Ubung 5/Musik_Hoch.wav">
+    </audio>
+    <h6>Tief</h6>
+    <img width="800" src="pics/Ubung 5/SpecMusikTief.png" alt="Bild konnte nicht geladen werden"><br>
+    <audio controls>
+        <source src="audio/Ubung 5/Musik_Tief.wav">
+    </audio>
+
+    <br>
+    <h3>Aufgabe 3b</h3>
+    <p>Zum Testen der Filter verwendet Weißes Rauschen, das alle Frequenzen enthält. Wenn wir<br>
+        nun den Frequenzverlauf des Originalaudios mit dem gefilterten vergleichen, muss sich ein<br>
+        Verlauf wie in der unteren Darstellung ergeben. Um eine Glättung des Spektrums zu erzielen, bei<br>
+        GRAM 'Spectrum Average' auf 100 setzen. Um was für eine Art Filter handelt es sich jeweils?</p>
+    <h6>Lösung</h6>
+    <h6>Original</h6>
+        <img width="800" src="pics/Ubung 5/SpecNoiseOrig.png" alt="Bild konnte nicht geladen werden"><br>
+    <audio controls>
+        <source src="audio/Ubung 5/Noise_03.wav">
+    </audio>
+    <h6>Hoch</h6>
+        <img width="800" src="pics/Ubung 5/SpecNoiseHoch.png" alt="Bild konnte nicht geladen werden"><br>
+    <audio controls>
+        <source src="audio/Ubung 5/Noise_Hoch.wav">
+    </audio>
+    <h6>Tief</h6>
+        <img width="800" src="pics/Ubung 5/SpecNoiseTief.png" alt="Bild konnte nicht geladen werden"><br>
+    <audio controls>
+        <source src="audio/Ubung 5/Noise_Tief.wav">
+    </audio>
+
+</body>
+
+</html>

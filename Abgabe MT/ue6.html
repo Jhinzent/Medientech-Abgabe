@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>Übung 6</title>
+        <link rel="stylesheet" type="text/css" href="formatue3.css">
+        <link rel="stylesheet" type="text/css" href="formatue6.css">
+    </head>
+
+    <body>
+
+        <iframe src="oben.html" width="800" height="120" name="IFrame3" id="IFrame3" scrolling="no" frameborder="0">
+            <p>Ihr Browser kann leider keine eingebetteten Frames anzeigen: Sie können die eingebettete Seite aber
+                den
+                folgenden.</p>
+        </iframe>
+
+        <h2>Übung 6</h2>
+        <br>
+        <h3>Aufgabe 1a</h3>
+        <p>Erweitere bmp_io so, dass ein Filter mit einem Kernel von 3x3 Pixeln angewandt werden kann. Beim
+            Mittelwertfilter wird ein Zielpixel aus dem Mittelwert aller Pixel im Kernel im Originalbild berechnet.
+            Beschreibe die Wirkung des Filters auf deine Bilder!</p>
+        <h6>Lösung</h6>
+        <h6>Code</h6>
+        <img src="pics/Ubung 6/1a1bCode.png" alt="Bild konnte nicht geladen werden"><br>
+		<p>manmade</p>
+		<img width="800" src="pics/Ubung 6/mm1a.bmp" alt="Bild konnte nicht geladen werden">
+		<p>nature</p>
+		<img width="800" src="pics/Ubung 6/nature1a.bmp" alt="Bild konnte nicht geladen werden">
+        <p>Durch die Mittelwertbildung mit einem 3x3 Pixel-Kernels entsteht ein Weichzeichnungsfilter.
+			Durch diesen Filter verändert sich das Zielpixel und alle angrenzenden Pixel auf den Mittelwert.</p>
+        <br>
+        <h3>Aufgabe 1b</h3>
+        <p>Wie verfährt man bei der Berechnung des Filters mit den Randpixeln?</p>
+        <h6>Lösung:</h6>
+        <p> Wir haben uns für das Verfahren entschieden, bei dem wir die Randpixel 
+			nicht berücksichtigen und der Filter nur auf die inneren Pixel angewendet wird.
+			Hier wären noch ein paar andere Berechnungsmöglichkeiten für die Randpixel:
+			Randpixel Zero- oder Grauwert-Padding, Last-Value und Symmetrische Fortsetzung
+		</p>
+        <br>
+        <h3>Aufgabe 1c</h3>
+        <p>Erweitere bmp_io so, dass das Differenzbild zwischen dem gefilterten und dem Originalbild berechnet werden
+            kann (analog zu Übung 2, Aufgabenpunkt 3.3)! Dieses muss offensichtlich die Information zeigen, die das
+            Filter entfernt hat. Beachte dabei, dass du das Differenzbild möglicherweise im Kontrast verstärken musst
+            (siehe Übung 4).</p>
+        <h6>Lösung</h6>
+        <h6>Code</h6>
+        <img src="pics/Ubung 6/1cCode.png" alt="Bild konnte nicht geladen werden"><br>
+        <h6>Original Manmade</h6>
+        <img width="400" src="pics/Ubung 2/raw/manmade_uebungsgruppe03.bmp" alt="Bild konnte nicht geladen werden">
+        <p>Mittelwertfilter(Weichzeichner) Manmade</p>
+		<img width="400" src="pics/Ubung 6/mm1a.bmp" alt="Bild konnte nicht geladen werden">
+		<p>Differenzbild Manmade</p>
+        <img width="400" src="pics/Ubung 6/mm1c.bmp" alt="Bild konnte nicht geladen werden">
+        <h6>Original Nature</h6>
+        <img width="400" src="pics/Ubung 2/raw/nature_uebungsgruppe03.bmp" alt="Bild konnte nicht geladen werden">
+        <p>Mittelwertfilter(Weichzeichner) Nature</p>
+		<img width="400" src="pics/Ubung 6/nature1a.bmp" alt="Bild konnte nicht geladen werden">
+		<p>Differenzbild Nature</p>
+        <img width="400" src="pics/Ubung 6/nature1c.bmp" alt="Bild konnte nicht geladen werden">
+
+
+        <br>
+        <h3>Aufgabe 2a</h3>
+        <p>Wende nun den folgenden 3*3 Kernel auf deine Bilder an! Beachte dabei, dass bei der direkten Anwendung der
+            Vorschrift Werte > 255 entstehen können. <br>
+            Durch welchen Wert muss also die Intensität des Zielpixels geteilt werden, damit man wieder in den erlaubten
+            Bereich 0...255 kommt?<br>
+            Beschreibe die Wirkung des Filters auf deine Bilder!</p>
+        <h6>Lösung</h6>
+        <p>Die Intensität muss durch den Wert 4 geteilt werden.
+			Die Kanten und Umrisse werden im Bild hervorgehoben, was das Bild schärfer wirken lässt.
+			Damit haben wir einen Scharfzeichnungsfilter erzeugt.</p>
+        <h6>Code</h6>
+        <img src="pics/Ubung 6/2aCode.png" alt="Bild konnte nicht geladen werden"><br>
+
+        <br>
+        <h3>Aufgabe 2b</h3>
+        <p>Berechne wiederum das Differenzbild zwischen dem gefilterten und dem Originalbild! Beachte dabei ebenfalls,
+            dass du das Differenzbild möglicherweise im Kontrast verstärken musst.</p>
+        <h6>Lösung</h6>
+		<p>Original Manmade</p>
+        <img width="400" src="pics/Ubung 2/raw/manmade_uebungsgruppe03.bmp" alt="Bild konnte nicht geladen werden">
+		<p>Gradient(Scharfzeichner) Manmade</p>
+        <img width="400" src="pics/Ubung 6/mm2a.bmp" alt="Bild konnte nicht geladen werden">
+		<p>Differenzbild Manmade</p>
+        <img width="400" src="pics/Ubung 6/mm2b.bmp" alt="Bild konnte nicht geladen werden">
+		<p>Original Nature</p>
+        <img width="400" src="pics/Ubung 2/raw/nature_uebungsgruppe03.bmp" alt="Bild konnte nicht geladen werden">
+		<p>Gradient(Scharfzeichner) Nature</p>
+        <img width="400" src="pics/Ubung 6/nature2a.bmp" alt="Bild konnte nicht geladen werden">
+		<p>Differenzbild Nature</p>
+        <img width="400" src="pics/Ubung 6/nature2b.bmp" alt="Bild konnte nicht geladen werden">
+        <br>
+        <h3>Aufgabe 3</h3>
+        <p>Das Medianfilter reiht alle Pixelintensitäten im Filterkernel der Größe nach auf und gibt den Intensitätswert
+            aus, der an der mittleren Position steht. Es wird oft zur Beseitigung von Kratzern oder punktförmigen
+            Bildfehlern verwendet. Füge zunächst mit Paint deinem Flächenbild zehn „Fehler“ hinzu, wie es in dem
+            folgenden Beispiel zu sehen ist. Benutze dazu einen weißen Stift mit der Strichstärke 1 Pixel. Programmiere
+            das Medianfilter für deine 3x3-Pixelmatrix und berechne das Ergebnisbild.</p>
+        <h6>Lösung</h6>
+        <p> Durch die Glättung des Medianfilters werden die fehlerhaften Pixel entfernt, leider gehen dabei aber auch Details des Bildes verloren.
+			Wenn man den Medianfilter häufiger anwendet, verliert das Bild stark an qualität und verwischt.</p>
+		<h6>Code</h6>
+        <img width="400" src="pics/Ubung 6/3Code.png" alt="Bild konnte nicht geladen werden"><br>
+		<p>Fehlerbild Nature</p>
+        <img width="400" src="pics/Ubung 6/natureFehlerbild.bmp" alt="Bild konnte nicht geladen werden">
+		<p>Fehlerbild mit Medianfilter Nature</p>
+        <img width="400" src="pics/Ubung 6/nature3Korrektur.bmp" alt="Bild konnte nicht geladen werden">
+		<p>Fehlerbild Manmade</p>
+        <img width="400" src="pics/Ubung 6/mm3.bmp" alt="Bild konnte nicht geladen werden">
+		<p>Fehlerbild mit Medianfilter Manmade</p>
+        <img width="400" src="pics/Ubung 6/mm3Korrektur.bmp" alt="Bild konnte nicht geladen werden">
+        <br>
+        <h3>Aufgabe 4</h3>
+        <p>Das Sobel-Filter dient der Detektion von Kanten im Bild. Programmiere ein Sobel-Filter für die x- und ein
+        Sobel-Filter für die y-Richtung und wende sie auf deine Bilder an! Die Matrizen für das Sobel-Filter finden sich
+        im pdf zur Bildfilterung.</p>
+        <h6>Lösung</h6>
+        <p>Code: Sobel-Filter in horizontaler Richtung/x-Richtung</p>
+        <img src="pics/Ubung 6/4CodeHori.png" alt="Bild konnte nicht geladen werden"><br>
+        <p>Manmade</p>
+        <img src="pics/Ubung 6/mm4horizontal.bmp" alt="Bild konnte nicht geladen werden"><br>
+        <p>Nature</p>
+        <img src="pics/Ubung 6/nature4horizontal.bmp" alt="Bild konnte nicht geladen werden"><br>
+        <p>Code: Sobel-Filter in vertikaler Richtung/y-Richtung</p>
+        <img src="pics/Ubung 6/4CodeVert.png" alt="Bild konnte nicht geladen werden"><br>
+        <p>Manmade</p>
+        <img src="pics/Ubung 6/mm4vertikal.bmp" alt="Bild konnte nicht geladen werden"><br>
+        <p>Nature</p>
+        <img src="pics/Ubung 6/nature4vertikal.bmp" alt="Bild konnte nicht geladen werden"><br>
+    </body>
+</html>
